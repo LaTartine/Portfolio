@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 745">
+  <title>mineSupport</title>
+  <g id="Calque_3" data-name="Calque 3">
+    <rect x="358.55" y="-141.24" width="27" height="1026.57" transform="translate(-154.11 372.05) rotate(-45)" style="fill: #302a26"/>
+    <rect x="-141.24" y="358.55" width="1026.57" height="27" transform="translate(-154.11 372.05) rotate(-45)" style="fill: #302a26"/>
+    <rect width="57" height="745" style="fill: #473c35"/>
+    <rect x="688" width="57" height="745" style="fill: #473c35"/>
+    <rect width="745" height="24" style="fill: #54453c"/>
+    <rect y="721" width="745" height="24" style="fill: #54453c"/>
+  </g>
+</svg>

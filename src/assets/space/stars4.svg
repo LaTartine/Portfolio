@@ -1,0 +1,59 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <symbol id="Star" viewBox="0 0 4 4">
+   <circle cx="2" cy="2" r="2" fill="#fff" id="svg_1"/>
+  </symbol>
+ </defs>
+ <title>stars3</title>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="1922" height="1082" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <use width="4" height="4" transform="translate(344.3399963378906,169.1199951171875) scale(1.3700000047683716) " xlink:href="#Star" id="svg_2" y="39.62489" x="21.89797"/>
+  <use width="4" height="4" transform="translate(356.9200134277344,290.19000244140625) scale(1.2000000476837158) " xlink:href="#Star" id="svg_3" y="45.23841" x="25.00018"/>
+  <use width="4" height="4" transform="translate(652.5599975585938,822.6199951171875) scale(1.1299999952316284) " xlink:href="#Star" id="svg_4" y="94.81736" x="-1.26423"/>
+  <use width="4" height="4" transform="translate(1027.8299560546875,577.969970703125) scale(1.0099999904632568) " xlink:href="#Star" id="svg_5" y="53.74861" x="29.70318"/>
+  <use width="4" height="4" transform="translate(1341.75,310.69000244140625) scale(1.0099999904632568) " xlink:href="#Star" id="svg_7" y="55.16305" x="-29.70318"/>
+  <use width="4" height="4" transform="translate(1611.3199462890625,381.95001220703125) scale(1.0199999809265137) " xlink:href="#Star" id="svg_11" y="53.22167" x="29.41197"/>
+  <use width="4" height="4" transform="translate(1225.6199951171875,925.030029296875) scale(1.0099999904632568) " xlink:href="#Star" id="svg_13" y="82.03736" x="48.09087"/>
+  <use width="4" height="4" transform="translate(882.9400024414062,887.97998046875) scale(1.1399999856948853) " xlink:href="#Star" id="svg_14" y="104.01076" x="-20.05027"/>
+  <use width="4" height="4" transform="translate(825.5800170898438,626.489990234375) scale(1.2300000190734863) " xlink:href="#Star" id="svg_15" y="44.13504" x="24.39042"/>
+  <use width="4" height="4" transform="translate(569.1799926757812,475.9800109863281) scale(1.0299999713897705) " xlink:href="#Star" id="svg_18" y="52.70495" x="29.12642"/>
+  <g id="svg_41">
+   <circle cx="109.64362" cy="219.64441" r="2.5" fill="#fff" id="svg_40"/>
+  </g>
+  <g id="svg_43" stroke="null">
+   <circle cx="407.18858" cy="87.18631" r="2.9" fill="#fff" id="svg_42" stroke="null"/>
+  </g>
+  <use width="4" height="4" xlink:href="#Star" y="169.57667" x="1446.33897" id="svg_27"/>
+  <use width="4" height="4" transform="translate(1596.6199951171875,301.9700012207031) scale(1.1399999856948853) " xlink:href="#Star" id="svg_29" y="47.61939" x="26.31598"/>
+  <use width="4" height="4" transform="translate(1745.7900390625,487.8999938964844) scale(1.1699999570846558) " xlink:href="#Star" id="svg_30" y="-14.65212" x="62.27151"/>
+  <use width="4" height="4" transform="translate(1429.3299560546875,761.6500244140625) scale(1.1100000143051147) " xlink:href="#Star" id="svg_33" y="159.58929" x="68.21155"/>
+  <g id="svg_39">
+   <circle cx="1168.19606" cy="826.38839" r="2" fill="#fff" id="svg_38"/>
+  </g>
+  <use width="4" height="4" transform="translate(1196.93994140625,608.5399780273438) scale(1.0299999713897705) " xlink:href="#Star" id="svg_35" y="23.57853" x="170.59761"/>
+  <g id="svg_36" transform="rotate(167.9377899169922 1676.425048828125,606.5800170898439) ">
+   <use width="4" height="4" xlink:href="#Star" y="649.47998" x="1572.37" id="svg_8"/>
+   <use width="4" height="4" xlink:href="#Star" y="790.46002" x="1619.39001" id="svg_9"/>
+   <use width="4" height="4" xlink:href="#Star" y="639.38" x="1735.85999" id="svg_10"/>
+   <use width="4" height="4" xlink:href="#Star" y="431.5" x="1590.58997" id="svg_12"/>
+   <use width="4" height="4" xlink:href="#Star" y="157.50999" x="1594.91003" id="svg_28"/>
+   <use width="4" height="4" xlink:href="#Star" y="1004.08002" x="1776.47998" id="svg_31"/>
+   <use width="4" height="4" xlink:href="#Star" y="1051.65002" x="1755.75" id="svg_32"/>
+  </g>
+  <g id="svg_37" transform="rotate(169.97044372558594 627.3991699218749,487.6645202636718) " stroke="null">
+   <use width="4" height="4" xlink:href="#Star" y="332.0248" x="1085.96722" id="svg_6" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="422.76482" x="850.92718" id="svg_16" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="306.91482" x="635.22716" id="svg_17" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="808.81481" x="127.36718" id="svg_21" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="553.97482" x="117.19718" id="svg_22" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="374.46481" x="108.98719" id="svg_23" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="253.84481" x="113.07719" id="svg_24" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="196.79481" x="898.05718" id="svg_25" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+   <use width="4" height="4" xlink:href="#Star" y="153.92481" x="1087.71722" id="svg_26" transform="matrix(1.0580964088439941,0,0,1.0114303827285767,-7.83139608946658,-1.2303841801349336) " stroke="null"/>
+  </g>
+ </g>
+</svg>

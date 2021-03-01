@@ -1,0 +1,106 @@
+<svg width="1826" height="1078" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <symbol viewBox="0 0 4 4" id="Star">
+   <circle id="svg_1" fill="#fff" r="2" cy="2" cx="2"/>
+  </symbol>
+ </defs>
+ <title>stars1</title>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="1080" width="1828" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_2" fill="#e8e8e8" r="3.5" cy="1074.93" cx="1335.7"/>
+  <use x="-14.10464" y="15.87828" id="svg_4" xlink:href="#Star" transform="translate(327.0400085449219,169.2899932861328) scale(1.4800000190734863) " height="4" width="4"/>
+  <use x="25.88567" y="1.77165" id="svg_5" xlink:href="#Star" transform="translate(417.6700134277344,192.36000061035156) scale(1.2699999809265137) " height="4" width="4"/>
+  <use x="0.97087" y="0.97087" id="svg_6" xlink:href="#Star" transform="translate(499.4200134277344,372.6700134277344) scale(1.0299999713897705) " height="4" width="4"/>
+  <use x="0.95238" y="0.95238" id="svg_7" xlink:href="#Star" transform="translate(625.9400024414062,505.79998779296875) scale(1.0499999523162842) " height="4" width="4"/>
+  <use x="-79.32054" y="39.8146" id="svg_9" xlink:href="#Star" transform="translate(1040.489990234375,370.3999938964844) scale(1.0800000429153442) " height="4" width="4"/>
+  <use x="0.9434" y="0.9434" id="svg_13" xlink:href="#Star" transform="translate(434.19000244140625,652.8099975585938) scale(1.059999942779541) " height="4" width="4"/>
+  <use x="0.7874" y="0.7874" id="svg_14" xlink:href="#Star" transform="translate(294.260009765625,670.9000244140625) scale(1.2699999809265137) " height="4" width="4"/>
+  <use x="233.33189" y="-99.45113" id="svg_15" xlink:href="#Star" transform="translate(155.3800048828125,513.97998046875) scale(1.1399999856948853) " height="4" width="4"/>
+  <use x="120.90632" y="-74.88891" id="svg_17" xlink:href="#Star" transform="translate(254.17999267578125,376.4200134277344) scale(1.1299999952316284) " height="4" width="4"/>
+  <use x="0.90909" y="0.90909" id="svg_18" xlink:href="#Star" transform="translate(364.5299987792969,714.3300170898438) scale(1.100000023841858) " height="4" width="4"/>
+  <use x="-69.91111" y="28.02345" id="svg_23" xlink:href="#Star" transform="translate(1191.6500244140625,329.239990234375) scale(1.1299999952316284) " height="4" width="4"/>
+  <use x="0.90909" y="0.90909" id="svg_24" xlink:href="#Star" transform="translate(1550.949951171875,380.8500061035156) scale(1.100000023841858) " height="4" width="4"/>
+  <use x="0.9434" y="0.9434" id="svg_25" xlink:href="#Star" transform="translate(1630.239990234375,597.5700073242188) scale(1.059999942779541) " height="4" width="4"/>
+  <use x="0.97087" y="0.97087" id="svg_26" xlink:href="#Star" transform="translate(1753.5400390625,689.52001953125) scale(1.0299999713897705) " height="4" width="4"/>
+  <use id="svg_27" x="1776.81508" y="438.79485" xlink:href="#Star" height="4" width="4"/>
+  <use x="-4.52583" y="39.65493" id="svg_28" xlink:href="#Star" transform="translate(1752.8399658203125,233.6699981689453) scale(1.159999966621399) " height="4" width="4"/>
+  <use x="0.96154" y="0.96154" id="svg_29" xlink:href="#Star" transform="translate(1546.8199462890625,119.08999633789062) scale(1.0399999618530273) " height="4" width="4"/>
+  <use x="0.90909" y="0.90909" id="svg_32" xlink:href="#Star" transform="translate(1645.010009765625,557.8800048828125) scale(1.100000023841858) " height="4" width="4"/>
+  <use x="32.87113" y="9.29268" id="svg_36" xlink:href="#Star" transform="translate(1343.27001953125,509.5400085449219) scale(1.0299999713897705) " height="4" width="4"/>
+  <use x="0.8" y="0.8" id="svg_37" xlink:href="#Star" transform="translate(1511.4000244140625,764.3900146484375) scale(1.25) " height="4" width="4"/>
+  <use id="svg_38" x="1613.34998" y="863.08002" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_39" x="1737.88" y="896.17999" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_40" x="1739.98999" y="860.34998" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_43" x="1133.08997" y="766.04999" xlink:href="#Star" height="4" width="4"/>
+  <use x="26.5777" y="37.24433" id="svg_44" xlink:href="#Star" transform="translate(972.780029296875,585.4299926757812) scale(1.25) " height="4" width="4"/>
+  <use x="-49.04396" y="-0.9641" id="svg_45" xlink:href="#Star" transform="translate(887.5800170898438,553.5399780273438) scale(1.7000000476837158) " height="4" width="4"/>
+  <use x="0.9434" y="0.9434" id="svg_46" xlink:href="#Star" transform="translate(838.0800170898438,782.1799926757812) scale(1.059999942779541) " height="4" width="4"/>
+  <use x="30.69298" y="8.69085" id="svg_47" xlink:href="#Star" transform="translate(750.9500122070312,882.9000244140625) scale(1.0099999904632568) " height="4" width="4"/>
+  <use x="0.79365" y="0.79365" id="svg_49" xlink:href="#Star" transform="translate(355.0799865722656,917.0800170898438) scale(1.2599999904632568) " height="4" width="4"/>
+  <use x="0" y="0" id="svg_50" xlink:href="#Star" transform="matrix(1.5700000524520876,0,0,1.5700000524520876,203.18684768676758,868.9868049621582) " height="4" width="4"/>
+  <use x="-36.41353" y="-38.61374" id="svg_52" xlink:href="#Star" transform="translate(172.02999877929688,795.8400268554688) scale(1.0099999904632568) " height="4" width="4"/>
+  <use x="0.98039" y="0.98039" id="svg_53" xlink:href="#Star" transform="translate(276.5299987792969,565.239990234375) scale(1.0199999809265137) " height="4" width="4"/>
+  <use x="84.52918" y="11.50984" id="svg_54" xlink:href="#Star" transform="translate(324.07000732421875,493.6000061035156) scale(1.0099999904632568) " height="4" width="4"/>
+  <use x="-59.50817" y="98.07632" id="svg_55" xlink:href="#Star" transform="translate(272.7799987792969,411.9100036621094) scale(1.1699999570846558) " height="4" width="4"/>
+  <use x="-55.39181" y="104.53366" id="svg_56" xlink:href="#Star" transform="translate(174.16000366210938,365.3900146484375) scale(1.0199999809265137) " height="4" width="4"/>
+  <use x="22.8154" y="-6.91743" id="svg_57" xlink:href="#Star" transform="translate(139.2100067138672,313.7900085449219) scale(1.0299999713897705) " height="4" width="4"/>
+  <use x="0.9009" y="0.9009" id="svg_58" xlink:href="#Star" transform="translate(92.16000366210938,268.8800048828125) scale(1.1100000143051147) " height="4" width="4"/>
+  <use x="56.59056" y="-14.43172" id="svg_59" xlink:href="#Star" transform="translate(69.51000213623047,227.6300048828125) scale(1.100000023841858) " height="4" width="4"/>
+  <use x="0.80645" y="0.80645" id="svg_60" xlink:href="#Star" transform="translate(54.779998779296875,135.4600067138672) scale(1.2400000095367432) " height="4" width="4"/>
+  <use x="49.36563" y="-15.85135" id="svg_61" xlink:href="#Star" transform="matrix(1.3799999952316282,0,0,1.3799999952316282,74.66000366210936,82.01000213623047) " height="4" width="4"/>
+  <use x="-51.21327" y="67.71803" id="svg_62" xlink:href="#Star" transform="translate(209.72999572753906,71.87000274658203) scale(1.0299999713897705) " height="4" width="4"/>
+  <use x="0.9901" y="0.9901" id="svg_63" xlink:href="#Star" transform="translate(422.1000061035156,71.8499984741211) scale(1.0099999904632568) " height="4" width="4"/>
+  <use id="svg_65" x="805.93985" y="75.70981" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_66" x="1243.15465" y="72.49984" xlink:href="#Star" height="4" width="4"/>
+  <use x="-111.6346" y="80.18824" id="svg_68" xlink:href="#Star" transform="translate(1288.030029296875,317.19000244140625) scale(1.059999942779541) " height="4" width="4"/>
+  <use id="svg_72" x="749.9252" y="212.62416" xlink:href="#Star" height="4" width="4"/>
+  <use x="-8.26607" y="25.50388" id="svg_73" xlink:href="#Star" transform="translate(966.530029296875,105.8499984741211) scale(1.2400000095367432) " height="4" width="4"/>
+  <use x="7.16509" y="20.66453" id="svg_75" xlink:href="#Star" transform="translate(946.2100219726562,339.67999267578125) scale(1.0700000524520874) " height="4" width="4"/>
+  <use x="-16.44875" y="-63.28957" id="svg_77" xlink:href="#Star" transform="translate(705.72998046875,831.0800170898438) scale(1.0199999809265137) " height="4" width="4"/>
+  <use x="0.89286" y="0.89286" id="svg_78" xlink:href="#Star" transform="translate(662.8800048828125,960.7000122070312) scale(1.1200000047683716) " height="4" width="4"/>
+  <use x="0.74627" y="0.74627" id="svg_79" xlink:href="#Star" transform="translate(980.4099731445312,963.9400024414062) scale(1.340000033378601) " height="4" width="4"/>
+  <use x="-87.66452" y="-19.86811" id="svg_80" xlink:href="#Star" transform="translate(1218.969970703125,924.4000244140625) scale(1.1799999475479126) " height="4" width="4"/>
+  <use x="0.97087" y="0.97087" id="svg_81" xlink:href="#Star" transform="translate(1294.0999755859375,935.8800048828125) scale(1.0299999713897705) " height="4" width="4"/>
+  <use x="0.98039" y="0.98039" id="svg_82" xlink:href="#Star" transform="translate(1060.9100341796875,1007.6500244140625) scale(1.0199999809265137) " height="4" width="4"/>
+  <use x="0.81967" y="0.81967" id="svg_85" xlink:href="#Star" transform="translate(321.44000244140625,916.9099731445312) scale(1.2200000286102295) " height="4" width="4"/>
+  <use x="91.04689" y="5.51557" id="svg_86" xlink:href="#Star" transform="translate(230.8800048828125,981.469970703125) scale(1.3899999856948853) " height="4" width="4"/>
+  <use x="-46.37331" y="-0.84876" id="svg_87" xlink:href="#Star" transform="translate(156.1300048828125,947.1500244140625) scale(1.440000057220459) " height="4" width="4"/>
+  <use x="-32.42414" y="-17.27267" id="svg_88" xlink:href="#Star" transform="translate(106,853.2100219726562) scale(1.100000023841858) " height="4" width="4"/>
+  <use x="0.93458" y="0.93458" id="svg_91" xlink:href="#Star" transform="translate(556.6099853515625,648.8300170898438) scale(1.0700000524520874) " height="4" width="4"/>
+  <use id="svg_92" x="990.46002" y="752.69" xlink:href="#Star" height="4" width="4"/>
+  <use x="0.88496" y="0.88496" id="svg_93" xlink:href="#Star" transform="translate(1634.5699462890625,724.4299926757812) scale(1.1299999952316284) " height="4" width="4"/>
+  <use x="0.89286" y="0.89286" id="svg_94" xlink:href="#Star" transform="translate(1673.77001953125,638.3900146484375) scale(1.1200000047683716) " height="4" width="4"/>
+  <use id="svg_95" x="1672.46495" y="381.56984" xlink:href="#Star" height="4" width="4"/>
+  <use x="-140.71693" y="-53.46501" id="svg_96" xlink:href="#Star" transform="translate(1767.0799560546875,141.6199951171875) scale(1.0099999904632568) " height="4" width="4"/>
+  <use id="svg_97" x="1768.50531" y="98.33536" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_98" x="1535.57166" y="496.29954" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_99" x="1800.14001" y="709.16998" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_100" x="1799.93005" y="840.01001" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_101" x="1821.91003" y="989.14001" xlink:href="#Star" height="4" width="4"/>
+  <use id="svg_102" x="1809.14001" y="1022.81" xlink:href="#Star" height="4" width="4"/>
+  <use x="4.61392" y="-22.69296" id="svg_103" xlink:href="#Star" transform="translate(1504.3900146484375,966.7999877929688) scale(1.1799999475479126) " height="4" width="4"/>
+  <use x="9.32912" y="27.14877" id="svg_104" xlink:href="#Star" transform="translate(1373.1600341796875,804.47998046875) scale(1.059999942779541) " height="4" width="4"/>
+  <use x="0.68493" y="0.68493" id="svg_105" xlink:href="#Star" transform="translate(1297.3800048828125,595.0800170898438) scale(1.4600000381469727) " height="4" width="4"/>
+  <g transform="rotate(126.98394012451172 1331.1217041015625,467.17990112304693) " id="svg_107">
+   <use id="svg_21" x="1156.75662" y="724.96984" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_22" x="1169.07669" y="478.91988" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_30" x="1360.99661" y="160.34987" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_31" x="1515.79666" y="352.43987" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_34" x="1142.44668" y="770.00988" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_35" x="1173.64663" y="532.95986" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_67" x="1252.68667" y="180.72986" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_69" x="1145.56668" y="530.87987" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_106" x="1203.75662" y="598.66985" xlink:href="#Star" height="4" width="4"/>
+  </g>
+  <g transform="rotate(124.25146484375 357.9451904296875,375.61529541015625) " id="svg_108">
+   <use id="svg_16" x="162.77018" y="264.94531" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_71" x="691.13018" y="115.7653" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_89" x="20.76017" y="631.46533" xlink:href="#Star" height="4" width="4"/>
+   <use id="svg_90" x="41.24017" y="551.52533" xlink:href="#Star" height="4" width="4"/>
+  </g>
+ </g>
+</svg>

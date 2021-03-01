@@ -1,0 +1,42 @@
+<svg id="landscape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2384 1614">
+  <defs>
+    <linearGradient id="Dégradé_sans_nom_33" data-name="Dégradé sans nom 33" x1="1836.42" y1="1131.88" x2="1836.42" y2="794.41" gradientTransform="translate(39.3 -79.41) rotate(2.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#323522"/>
+      <stop offset="1" stop-color="#585030"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_33-2" x1="550.97" y1="1315.27" x2="550.97" y2="771.27" gradientTransform="translate(0.56 -0.27)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_33-3" x1="778.97" y1="1104.27" x2="778.97" y2="560.27" gradientTransform="translate(0.56 -0.27)" xlink:href="#Dégradé_sans_nom_33"/>
+  </defs>
+  <title>fond3</title>
+  <polygon id="sapin0" points="1741.31 1127.77 1839.68 794.27 1908.02 1135.04 1741.31 1127.77" style="fill: url(#Dégradé_sans_nom_33)"/>
+  <polygon id="sapin1" points="417.03 1315 552.03 771 686.03 1315 417.03 1315" style="fill: url(#Dégradé_sans_nom_33-2)"/>
+  <polygon id="sapin2" points="645.03 1104 780.03 560 914.03 1104 645.03 1104" style="fill: url(#Dégradé_sans_nom_33-3)"/>
+  <g id="maison0">
+    <polygon points="1705.06 1129.78 1557.13 1150.26 1564.12 982.39 1712.04 961.91 1705.06 1129.78" style="fill: #b78e58"/>
+    <polygon points="1496.53 1126.24 1561.54 1151 1568.31 988.31 1540.17 930.89 1503.3 963.55 1496.53 1126.24" style="fill: #6a4f36"/>
+    <g>
+      <polygon points="1738.55 1009.13 1584.56 1014.92 1538.66 920.92 1688.59 922.04 1738.55 1009.13" style="fill: #ac5832"/>
+      <polygon points="1604.98 1014.06 1588.31 1014.48 1542.23 921.54 1555.55 921.54 1604.98 1014.06" style="fill: #c1603a"/>
+      <polygon points="1630 1012.88 1612.76 1013.83 1567.2 921.47 1580.53 921.47 1630 1012.88" style="fill: #c1603a"/>
+      <polygon points="1656.11 1012.3 1638.89 1012.7 1594.4 921.49 1607.16 921.47 1656.11 1012.3" style="fill: #c1603a"/>
+      <polygon points="1680.02 1011.08 1663.33 1012.05 1618.8 921.95 1632.12 921.95 1680.02 1011.08" style="fill: #c1603a"/>
+      <polygon points="1705.6 1009.92 1688.36 1010.87 1644.88 921.93 1658.76 921.95 1705.6 1009.92" style="fill: #c1603a"/>
+      <polygon points="1730.05 1009.27 1713.36 1010.24 1670.39 922.43 1683.16 922.41 1730.05 1009.27" style="fill: #c1603a"/>
+      <polygon points="1477.15 988.4 1493.25 990.33 1539.28 940.86 1571.18 1008.88 1582.88 1010.28 1538.71 920.92 1477.15 988.4" style="fill: #7b3f24"/>
+      <polygon points="1567.32 932.02 1555.09 932.59 1551.51 925.26 1563.21 925.35 1567.32 932.02" style="fill: #c19040"/>
+      <polygon points="1595.69 943.75 1583.46 944.32 1579.89 936.99 1591.58 937.07 1595.69 943.75" style="fill: #c19040"/>
+      <polygon points="1610.52 974.33 1598.29 974.9 1594.71 967.57 1606.4 967.66 1610.52 974.33" style="fill: #c19040"/>
+      <polygon points="1642.69 947.92 1630.47 948.49 1626.89 941.16 1638.58 941.25 1642.69 947.92" style="fill: #c19040"/>
+      <polygon points="1635.33 951.5 1623.1 952.07 1619.52 944.74 1631.21 944.83 1635.33 951.5" style="fill: #c19040"/>
+      <polygon points="1697.54 950.2 1685.31 950.77 1681.73 943.44 1693.43 943.53 1697.54 950.2" style="fill: #c19040"/>
+      <polygon points="1670.97 935.22 1658.74 935.79 1655.16 928.46 1666.86 928.55 1670.97 935.22" style="fill: #c19040"/>
+      <polygon points="1703.91 983.77 1691.69 984.34 1688.11 977.01 1699.8 977.1 1703.91 983.77" style="fill: #c19040"/>
+      <polygon points="1692.44 992.73 1680.21 993.3 1676.64 985.97 1688.33 986.05 1692.44 992.73" style="fill: #c19040"/>
+      <polygon points="1633.6 1006.37 1621.37 1006.94 1617.79 999.61 1629.49 999.7 1633.6 1006.37" style="fill: #c19040"/>
+      <polygon points="1656.73 984.02 1644.5 984.6 1640.92 977.26 1652.62 977.35 1656.73 984.02" style="fill: #c19040"/>
+      <polygon points="1588.98 985.09 1576.75 985.66 1573.17 978.33 1584.86 978.42 1588.98 985.09" style="fill: #c19040"/>
+    </g>
+    <rect x="1621.74" y="1044.86" width="5.55" height="39.92" transform="matrix(1, 0.04, -0.04, 1, 45.67, -66.61)" style="fill: #4a3a21"/>
+    <rect x="1668.55" y="1040.15" width="5.55" height="39.92" transform="translate(45.51 -68.56) rotate(2.38)" style="fill: #4a3a21"/>
+  </g>
+</svg>

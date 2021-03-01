@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 906 475">
+  <title>elevator</title>
+  <g id="Calque_3" data-name="Calque 3">
+    <rect x="22.35" width="44.13" height="475" style="fill: #302a26"/>
+    <rect x="839.52" width="44.13" height="475" style="fill: #302a26"/>
+    <rect x="430.93" y="-334.31" width="44.13" height="861.3" transform="translate(549.34 -356.66) rotate(90)" style="fill: #302a26"/>
+    <rect x="385.98" y="-87.64" width="131.36" height="886.09" transform="matrix(-0.07, 1, -1, -0.07, 837.6, -70.47)" style="fill: #302a26"/>
+    <rect x="411.83" y="-281.93" width="81.88" height="880.78" rx="0.25" transform="translate(594.6 -299.8) rotate(87.91)" style="fill: #302a26"/>
+    <rect x="409.97" y="-178.45" width="84.37" height="891.74" rx="0.25" transform="translate(684.97 -203.49) rotate(85.71)" style="fill: #302a26"/>
+    <rect x="425.3" y="16.4" width="56.99" height="861.3" transform="translate(900.85 -6.74) rotate(90)" style="fill: #302a26"/>
+  </g>
+</svg>
