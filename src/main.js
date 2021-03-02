@@ -9,6 +9,11 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Import Bootstrap an BootstrapVue CSS files
 import './styles/custom-bootstrap.scss'
 
+//Import media queries vue
+import VueMq from 'vue-mq'
+
+Vue.use(VueMq)
+
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
@@ -34,5 +39,10 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  breakpoints: {
+    sm: 450,
+    md: 1250,
+    lg: Infinity,
+  },
   render: h => h(App)
 }).$mount('#app')

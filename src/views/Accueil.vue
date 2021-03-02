@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div id="nav" class="d-flex justify-content-between flex-row px-3 py-2 fixed-top">
+      <div v-if="$mq === 'md' || $mq === 'lg'" id="nav" class="d-flex justify-content-between flex-row px-3 py-2 fixed-top">
           <div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;" @click="$router.push('Projet')"></div>
           <div class="d-flex justify-content-center align-items-center">
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sites')">Sites</span>
@@ -9,6 +9,21 @@
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('Illustrations')">Illustrations</span>
           </div>
       </div>
+
+      <div v-else class="fixed-top" style="z-index: 2">
+          <div id="burgerTrigger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+          <ul id="navMob" class="d-flex w-100 p-0 flex-column">
+              <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sites')">Sites</li>
+              <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sky')">Animations</li>
+              <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('jeux')">Jeux</li>
+              <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('Illustrations')">Illustrations</li>
+          </ul>
+      </div>
+
 
       <!--<div class="asscroll-container">
           <div class="inner">-->
@@ -35,8 +50,10 @@
                   <!-- Cover -->
                   <div class="home d-flex justify-content-center align-items-center" style="height: 100vh">
                       <div class="d-flex justify-content-center align-items-center flex-column">
-                          <h1 class="text-white text-center" style="font-size: 5rem; z-index: 1">Allan Pinot</h1>
-                          <h2 class="text-white" style="font-size: 5rem; z-index: 1">Portfolio</h2>
+                          <h1 v-if="$mq === 'md' || $mq === 'lg'" class="text-white text-center" style="font-size: 5rem; z-index: 1">Allan Pinot</h1>
+                          <h1 v-else class="text-white text-center" style="font-size: 2.5rem !important; z-index: 1">Allan Pinot</h1>
+                          <h2 v-if="$mq === 'md' || $mq === 'lg'" class="text-white" style="font-size: 5rem; z-index: 1">Portfolio</h2>
+                          <h2 v-else class="text-white" style="font-size: 2.5rem !important; z-index: 1">Portfolio</h2>
                       </div>
                   </div>
 
@@ -44,14 +61,14 @@
                   <div  id="TitleSite" class="container-fluid">
 
                       <div  class="row mt-3" style="margin-bottom: 50px">
-                          <div class="offset-8 col-3 parallax2" data-depth="30" ><img class="float h-100 w-100" src="../assets/space/astronaute.png" alt="Image Astronaute"></div>
+                          <div class="offset-md-8 offset-2 col-md-3 col-9 parallax2" data-depth="30" ><img class="float h-100 w-100" src="../assets/space/astronaute.png" alt="Image Astronaute"></div>
                       </div>
                       <div ref="sites" class="row" style="margin-bottom: 100px;">
                           <h3 data-depth="0" class="parallax2 offset-1 col-3 align-self-center">Sites Web</h3>
                       </div>
 
                       <div v-for="(item, index) in projetsSites" :key="index" class="row spaceRow" style="margin-bottom: 100px">
-                          <div ref="SpaceProjectCol" class="col-1" >
+                          <div ref="SpaceProjectCol" class="col-md-1 col-4" >
                               <div ref="animatedStarGroup" class="animatedStarGroup position-relative w-50">
                                   <svg class="starFloat animatedStar" data-name="animatedStar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.34 92.34">
                                       <line class="path" x1="52.17" y1="45.67" x2="88.17" y2="45.67" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 500;stroke-width: 8px;stroke-dasharray: 25,20,25,20,25,40"/>
@@ -92,8 +109,8 @@
                   <div ref="sky" data-depth='-0.2' class="cloud parallax3" style="height: 100vh"></div>
                   <b-container fluid class="w-100 position-relative" style="margin-top: -40vh; padding-bottom: 10vh;">
                       <b-row>
-                          <div data-depth='1' class="parallax3">
-                              <h3 class="" style="margin-left: 120px; ">Animations</h3>
+                          <div data-depth='1' class="parallax3 offset-md-2">
+                              <h3 class="" style="margin-left: 20px; ">Animations</h3>
                           </div>
                       </b-row>
                       <b-row v-for="(item, index) in projetsAnimations" :key="index" style="margin-bottom: 120px">
@@ -380,7 +397,7 @@
                       </div>
                   </b-row>
                   <b-row v-for="(item, index) in projetsJeux" :key="index" style="margin-bottom: 10px">
-                      <b-col ref="skyProjectCol" cols="1">
+                      <b-col ref="skyProjectCol" cols="3" md="1">
                           <div :id="'tooltip-ground'+index" class="w-50">
                               <svg ref="flower" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                                   <title>flower</title>
@@ -663,6 +680,18 @@ export default {
 
       asscroll.on("raf", ScrollTrigger.update);
       ScrollTrigger.addEventListener("refresh", () => asscroll.onResize());*/
+
+     //MENU
+
+      const nav = document.getElementById('navMob');
+      const burger = document.getElementById('burgerTrigger');
+      const overlay = document.getElementById('overlay');
+
+      burger.addEventListener('click', () => {
+          burger.classList.toggle('active');
+          nav.classList.toggle('active');
+          overlay.classList.toggle('active');
+      });
 
     //SPACE
 
@@ -1336,7 +1365,7 @@ export default {
 
   .lanternUnderground:not(:last-child)
   {
-      margin-bottom: -300px;
+      /*margin-bottom: -300px;*/
   }
 
   /*Font*/
@@ -1358,7 +1387,68 @@ export default {
   }
 
   .content{
-    overflow-x: hidden;
+    overflow: hidden;
   }
+
+    /* Burger menu */
+
+  #burgerTrigger {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #17141d;
+      padding: 1rem;
+      z-index: 1000;
+      cursor: pointer;
+      transition: 0.3s linear;
+      box-shadow: 2px 2px 5px #17141d;
+  }
+
+  #burgerTrigger:hover {
+      background-color: goldenrod;
+  }
+
+  .line {
+      width: 22px;
+      margin-bottom: 5px;
+      height: 2px;
+      background-color: white;
+  }
+
+  .line:last-child {
+      margin-bottom: 0;
+  }
+
+  #navMob {
+      height: 100vh;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #17141d;
+      color: white;
+      position: fixed;
+      right: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s linear;
+      margin-left: 200px;
+  }
+
+  #navMob.active {
+      transform: translateX(0);
+  }
+
+  ul {
+      list-style: none;
+      text-align: center;
+  }
+
+  li {
+      text-transform: uppercase;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      line-height: 1.6;
+  }
+
 
 </style>
