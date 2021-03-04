@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Accueil from '../views/Accueil.vue'
 import Projet from '../views/Projet.vue'
+import ManageProjects from '../views/ManageProjects.vue'
+import AddModProject from '../views/AddModProject.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +37,12 @@ const routes = [
         ]
     }
   },
+    {
+        path: '/admin', name: 'ManageProjects', component: ManageProjects
+    },
+    {
+        path: '/addmodproject/:id', name: 'AddModProject', component: AddModProject
+    },
   { path: '/about', name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

@@ -34,6 +34,17 @@ import CustomEase from "gsap/dist/CustomEase";
 gsap.registerPlugin(CustomEase);
 Vue.use(gsap);
 
+//axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+//ajout axios vue
+Vue.use(VueAxios, axios)
+
+/*Fontawesome*/
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
+
 Vue.config.productionTip = false
 
 new Vue({
