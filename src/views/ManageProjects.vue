@@ -9,6 +9,7 @@
                         <p v-if="message.nom !== '' || message.prenom !== '' || message.mail !== ''" class="mx-0 mb-4 col-12 col-md-4 mb-md-0 font-weight-bold">{{message.nom}}</p>
                         <p v-if="message.nom !== '' || message.prenom !== '' || message.mail !== ''" class="mx-0 mb-4 col-12 col-md-4 mb-md-0 font-weight-bold">{{message.prenom}}</p>
                         <p v-if="message.nom !== '' || message.prenom !== '' || message.mail !== ''" class="mx-0 mb-4 col-12 col-md-4 mb-md-0 font-weight-bold">{{message.mail}}</p>
+                        <p class="mx-0 mb-4 col-12 col-md-12 mb-md-0">{{message.date}}</p>
                         <p v-if="message.nom !== '' || message.prenom !== '' || message.mail !== ''" class="mx-0 mb-4 col-12 col-md-12 mb-md-0">{{message.message}}</p>
                         <p v-else class="mx-0 mb-4 col-12">{{message.message}}</p>
                     </div>

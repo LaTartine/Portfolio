@@ -1,13 +1,13 @@
 <template>
   <div>
       <div v-if="$mq === 'md' || $mq === 'lg'" id="nav" class="d-flex justify-content-between flex-row px-3 py-2 fixed-top">
-          <div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;" @click="$router.push('Projet')"></div>
+          <div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;" ></div>
           <div class="d-flex justify-content-center align-items-center">
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sites')">Sites</span>
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sky')" >Animations</span>
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('jeux')">Jeux</span>
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('Illustrations')">Illustrations</span>
-              <div style="cursor: pointer;" class="mr-5 text-light"><i class="fas fa-envelope"></i></div>
+              <div style="cursor: pointer;" class="mr-5 text-light" @click="$router.push('Contact')"><i class="fas fa-envelope"></i></div>
           </div>
       </div>
 
@@ -22,7 +22,7 @@
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sky')">Animations</li>
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('jeux')">Jeux</li>
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('Illustrations')">Illustrations</li>
-              <div><i class="fas fa-envelope"></i></div>
+              <div class="text-light" @click="$router.push('Contact')"><i class="fas fa-envelope"></i></div>
           </ul>
       </div>
 
@@ -63,7 +63,7 @@
                   <div  id="TitleSite" class="container-fluid">
 
                       <div  class="row mt-3" style="margin-bottom: 50px">
-                          <div class="offset-md-1 offset-1 col-md-5 col-9 parallax2 text-light" data-depth="2" >Bienvenue sur mon Portfolio<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, il est conseillé de scroller à l'aide de l'ascenseur ou de maintenir le clique molette.</span><br><br>N'hésitez pas à me contacter  <b-button><i class="fas fa-envelope"></i></b-button><br> <br>Bonne visite !</div>
+                          <div class="offset-md-1 offset-1 col-md-5 col-9 parallax2 text-light" data-depth="2" >Bienvenue sur mon Portfolio<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, il est conseillé de scroller à l'aide de l'ascenseur ou de maintenir le clique molette.</span><br><br>N'hésitez pas à me contacter  <b-button @click="$router.push('Contact')"><i class="fas fa-envelope"></i></b-button><br> <br>Bonne visite !</div>
                           <div class="offset-md-2 offset-2 col-md-3 col-9 parallax2" data-depth="5" ><img class="float h-100 w-100" src="../assets/space/astronaute.png" alt="Image Astronaute"></div>
                       </div>
                       <div ref="sites" class="row" style="margin-bottom: 100px;">
@@ -83,7 +83,7 @@
                                   <div :id="'tooltip-stars'+index" ref="starProjectSelector" class="starProjectSelector" style="position: absolute; top: 0; left: 0;" ></div>
                               </div>
                           </div>
-                          <b-tooltip v-if="index !== 0" placement="right" variant="light" :id="'starProjectTooltip'+index" ref="starProjectTooltip" :target="'tooltip-stars'+index">
+                          <b-tooltip v-if="index === 0 && $mq === 'sm'" placement="right" variant="light" :id="'starProjectTooltip'+index" ref="starProjectTooltip" :target="'tooltip-stars'+index">
                               <div class="d-flex flex-column align-items-center justify-content-center py-2" style="width: 450px">
                                   <img class="w-100 h-100 mb-2" :src="getImgUrl(item.img)" alt="">
                                   <h4>{{item.nom}}</h4>
@@ -558,7 +558,7 @@
               </div>
               <div class="footer text-light" style="background-color: rgb(0,0,0); height: 100px">
                   <div class="text-center w-100">
-                      <b-button class="mx-auto">Laisser un commentaire</b-button>
+                      <b-button class="mx-auto" @click="$router.push('Contact')">Laisser un commentaire</b-button>
                   </div>
               </div>
 

@@ -134,13 +134,14 @@ export default {
         } );
     },
 
-    axiosCreateContact(nom, prenom, mail, message)
+    axiosCreateContact(nom, prenom, mail, message, date)
     {
         const params = {
             nom: nom,
             prenom: prenom,
             mail: mail,
             message: message,
+            date: date,
         };
         var form_data = new FormData();
         for ( let key in params ) {

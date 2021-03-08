@@ -113,7 +113,7 @@
                     }
                     else
                     {
-                        ajaxService.axiosCreateContact(this.formulaire.nom, this.formulaire.prenom, this.formulaire.mail, this.formulaire.message).then(result => {
+                        ajaxService.axiosCreateContact(this.formulaire.nom, this.formulaire.prenom, this.formulaire.mail, this.formulaire.message, this.today()).then(result => {
                             console.log(result);
                             this.$bvModal.show("sent");
                         });
@@ -123,6 +123,12 @@
                 else{
                     this.$bvModal.show("echec");
                 }
+            },
+            today()
+            {
+                var now = new Date();
+                var todayUTC = now.toLocaleString(); // "9/29/2020, 2:42:07 PM"
+                return todayUTC;
             }
         }
     }
