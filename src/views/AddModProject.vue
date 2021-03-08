@@ -6,7 +6,7 @@
             <b-container fluid class="pr-5 pl-5 pt-5 pb-2 bg-secondary">
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Nom:</label>
+                        <label class="text-light">Nom ({{sizeLeft(formulaire.nom, 500)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-input :state="this.formulaire.nom != null && this.formulaire.nom != ''" v-model="formulaire.nom" type="text"></b-form-input>
@@ -25,7 +25,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Miniature:</label>
+                        <label class="text-light">Miniature ({{sizeLeft(formulaire.miniature, 200)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-file
@@ -41,7 +41,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Images du carousel:</label>
+                        <label class="text-light">Images du carousel :</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-file
@@ -64,7 +64,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Description:</label>
+                        <label class="text-light">Description ({{sizeLeft(formulaire.description, 20000)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-textarea v-model="formulaire.description" :state="this.formulaire.description != null && this.formulaire.description != ''"></b-form-textarea>
@@ -73,7 +73,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Contexte:</label>
+                        <label class="text-light">Contexte ({{sizeLeft(formulaire.contexte, 10000)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-textarea v-model="formulaire.contexte" :state="this.formulaire.contexte != null && this.formulaire.contexte != ''" ></b-form-textarea>
@@ -82,7 +82,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">Collaboration:</label>
+                        <label class="text-light">Collaboration ({{sizeLeft(formulaire.collaboration, 500)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-textarea v-model="formulaire.collaboration" :state="this.formulaire.collaboration != null && this.formulaire.collaboration != ''"></b-form-textarea>
@@ -91,7 +91,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">ID de la vidéo Youtube:</label>
+                        <label class="text-light">ID de la vidéo Youtube ({{sizeLeft(formulaire.message, 50)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-input v-model="formulaire.idVideo" :state="this.formulaire.idVideo != null && this.formulaire.idVideo !== ''" type="text"></b-form-input>
@@ -100,7 +100,7 @@
 
                 <b-row class="my-1">
                     <b-col sm="3">
-                        <label class="text-light">URL du site</label>
+                        <label class="text-light">URL du site ({{sizeLeft(formulaire.urlSite, 500)}}):</label>
                     </b-col>
                     <b-col sm="9">
                         <b-form-input v-model="formulaire.urlSite" :state="this.formulaire.urlSite != null && this.formulaire.urlSite !== ''" type="text"></b-form-input>
@@ -117,6 +117,10 @@
                 </b-row>
             </b-container>
         </div>
+
+        <b-modal id="sent" centered title="Envoyé !">
+            <p class="my-4">Requête envoyée</p>
+        </b-modal>
 
         <b-button v-if="this.$route.params.id !== 'new'" class="mt-2 d-block ml-auto mr-5" v-on:click="UpdateData()">Mettre à jour</b-button>
         <b-button v-else class="mt-2 d-block ml-auto mr-5" v-on:click="sendData()">Envoyer</b-button>
@@ -191,6 +195,14 @@
         },
         methods:
         {
+            sizeLeft( str, totalSize)
+            {
+                if( str )
+                {
+                    return str.length+" / "+totalSize;
+                }
+                return 0+" / "+totalSize;
+            },
             onFileChange(e) {
                 const file = e.target.files[0];
                 this.formulaire.miniature = file;
@@ -237,6 +249,7 @@
                     this.formulaire.urlSite,
                     formType
                 ).then(result =>{console.log(result.data);});
+                this.$bvModal.show("sent");
             },
             UpdateData()
             {
@@ -286,6 +299,7 @@
                 ajaxService.axiosSupprCarouselImages(
                     this.carouselToSuppr
                 ).then(result =>{console.log(result.data);});
+                this.$bvModal.show("sent");
             },
             supprCarouselImage(index)
             {

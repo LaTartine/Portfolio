@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     projetID: "0",
     asscroll: null,
+    isConn: false
   },
   getters: {
     getProjetID(context)
@@ -17,6 +18,10 @@ export default new Vuex.Store({
     getAsscroll(context)
     {
       return context.asscroll;
+    },
+    isConnected(context)
+    {
+      return context.isConn;
     }
   },
   mutations: {
@@ -34,6 +39,12 @@ export default new Vuex.Store({
         state.asscroll = new ASScroll({
             customScrollbar: true, ease: "0.25", disableOnTouch : false
         });
+    },
+    setConnected(state)
+    {
+      console.log("set connected");
+      state.isConn = true;
+      console.log(state.isConn);
     }
   },
   actions: {

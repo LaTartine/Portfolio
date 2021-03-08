@@ -134,4 +134,68 @@ export default {
         } );
     },
 
+    axiosCreateContact(nom, prenom, mail, message)
+    {
+        const params = {
+            nom: nom,
+            prenom: prenom,
+            mail: mail,
+            message: message,
+        };
+        var form_data = new FormData();
+        for ( let key in params ) {
+            form_data.append(key, params[key]);
+        }
+
+        return axios.post(param["createContact"], form_data ).then(reponse => {
+            return reponse.data
+        } );
+    },
+
+    axiosGetAllContacts()
+    {
+        const params = {
+            key: "getAllContacttcAtnocllateg_-?!.",
+        };
+        var form_data = new FormData();
+        for ( let key in params ) {
+            form_data.append(key, params[key]);
+        }
+
+        return axios.post(param["getAllContacts"], form_data ).then(reponse => {
+            return reponse.data
+        } );
+    },
+
+    axiosTryConnexion( username, password)
+    {
+        const params = {
+            username: username,
+            password: password
+        };
+        var form_data = new FormData();
+        for ( let key in params ) {
+            form_data.append(key, params[key]);
+        }
+
+        return axios.post(param["connect"], form_data ).then(reponse => {
+            return reponse.data
+        } );
+    },
+
+    axiosDeleteContact( id )
+    {
+        const params = {
+            id: id,
+        };
+        var form_data = new FormData();
+        for ( let key in params ) {
+            form_data.append(key, params[key]);
+        }
+
+        return axios.post(param["supprContact"], form_data ).then(reponse => {
+            return reponse.data
+        } );
+    },
+
 }

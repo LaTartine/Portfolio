@@ -4,6 +4,10 @@ import Accueil from '../views/Accueil.vue'
 import Projet from '../views/Projet.vue'
 import ManageProjects from '../views/ManageProjects.vue'
 import AddModProject from '../views/AddModProject.vue'
+import Contact from '../views/Contact.vue'
+import Connexion from '../views/Connexion.vue'
+
+import store from '@/store'
 
 Vue.use(VueRouter)
 
@@ -37,11 +41,52 @@ const routes = [
         ]
     }
   },
+  {
+    path: '/contact', name: 'Contact', component: Contact, meta: {
+        title: 'Allan Pinot - Contact',
+        metaTags: [
+            {
+                name: 'Allan Pinot - Contact',
+                content: 'Allan Pinot Portfolio, illustration, sites webs, jeux et dessins. De nombreux projets dans une site animé. Posez vos questions ou contactez Allan Pinot.'
+            },
+            {
+                property: 'og:description',
+                content: 'Allan Pinot Portfolio, illustration, sites webs, jeux et dessins. De nombreux projets dans une site animé. Posez vos questions ou contactez Allan Pinot.'
+            }
+        ]
+    }
+  },
+  {
+    path: '/connexion', name: 'Connexion', component: Connexion
+  },
     {
-        path: '/admin', name: 'ManageProjects', component: ManageProjects
+        path: '/admin', name: 'ManageProjects', component: ManageProjects, beforeEnter: ( from, to, next) => {
+            console.log(store.getters['isConnected']);
+            if( store.getters['isConnected'])
+            {
+                console.log("access");
+                next();
+            }
+            else
+            {
+                console.log("denied");
+                next({ name: 'Connexion' })
+            }
+        }
     },
     {
-        path: '/addmodproject/:id', name: 'AddModProject', component: AddModProject
+        path: '/addmodproject/:id', name: 'AddModProject', component: AddModProject, beforeEnter: ( from, to, next) => {
+            if( store.getters['isConnected'])
+            {
+                console.log("access");
+                next();
+            }
+            else
+            {
+                console.log("denied");
+                next(false);
+            }
+        }
     },
   { path: '/about', name: 'About',
     // route level code-splitting

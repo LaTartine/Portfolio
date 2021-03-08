@@ -16,4 +16,8 @@ export default {
     updateProjet: host+"updateProjet",
     supprCarouselImages: host+"supprCarouselImages",
     deleteProjet: host+"deleteProjet",
+    createContact: host+"createContact",
+    getAllContacts: host+"getAllContacts",
+    connect: host+"connect",
+    supprContact: host+"supprContact",
 }

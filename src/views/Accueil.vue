@@ -7,6 +7,7 @@
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sky')" >Animations</span>
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('jeux')">Jeux</span>
               <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('Illustrations')">Illustrations</span>
+              <div style="cursor: pointer;" class="mr-5 text-light"><i class="fas fa-envelope"></i></div>
           </div>
       </div>
 
@@ -21,6 +22,7 @@
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sky')">Animations</li>
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('jeux')">Jeux</li>
               <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('Illustrations')">Illustrations</li>
+              <div><i class="fas fa-envelope"></i></div>
           </ul>
       </div>
 
@@ -61,7 +63,8 @@
                   <div  id="TitleSite" class="container-fluid">
 
                       <div  class="row mt-3" style="margin-bottom: 50px">
-                          <div class="offset-md-8 offset-2 col-md-3 col-9 parallax2" data-depth="30" ><img class="float h-100 w-100" src="../assets/space/astronaute.png" alt="Image Astronaute"></div>
+                          <div class="offset-md-1 offset-1 col-md-5 col-9 parallax2 text-light" data-depth="2" >Bienvenue sur mon Portfolio<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, il est conseillé de scroller à l'aide de l'ascenseur ou de maintenir le clique molette.</span><br><br>N'hésitez pas à me contacter  <b-button><i class="fas fa-envelope"></i></b-button><br> <br>Bonne visite !</div>
+                          <div class="offset-md-2 offset-2 col-md-3 col-9 parallax2" data-depth="5" ><img class="float h-100 w-100" src="../assets/space/astronaute.png" alt="Image Astronaute"></div>
                       </div>
                       <div ref="sites" class="row" style="margin-bottom: 100px;">
                           <h3 data-depth="0" class="parallax2 offset-1 col-3 align-self-center">Sites Web</h3>
@@ -553,7 +556,11 @@
                       </b-row>
                   </div>
               </div>
-              <div class="footer text-light" style="background-color: rgb(0,0,0); height: 100px"></div>
+              <div class="footer text-light" style="background-color: rgb(0,0,0); height: 100px">
+                  <div class="text-center w-100">
+                      <b-button class="mx-auto">Laisser un commentaire</b-button>
+                  </div>
+              </div>
 
           </div>
 
@@ -1135,8 +1142,8 @@ export default {
   }
 
   .twinkling{
-    background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-    background-size: 10%;
+    background:transparent url("../assets/space/twinkling.png") repeat top center;
+    background-size: 15%;
     z-index:1;
 
     -moz-animation:move-twink-back 200s linear infinite;
