@@ -19,14 +19,6 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-//Parallax Scroll
-import VueRellax from 'vue-rellax'
-Vue.use(VueRellax)
-
-//Parallax Souris
-import VueParallaxView from "vue-parallax-view"
-Vue.use(VueParallaxView);
-import "vue-parallax-view/dist/vue-parallax-view.css";
 
 // typical GSAP
 import gsap from "gsap";

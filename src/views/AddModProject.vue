@@ -3,7 +3,7 @@
         <h1 v-if="this.$route.params.id !== 'new'" class="mx-auto text-light text-center">Modifier un projet</h1>
         <h1 v-else class="mx-auto text-light text-center">Ajouter un projet</h1>
         <div class="list px-5 mt-5">
-            <b-container fluid class="pr-5 pl-5 pt-5 pb-2 bg-secondary">
+            <b-container fluid class="pr-5 pl-5 pt-5 pb-2" style="background-color: #111111;">
                 <b-row class="my-1">
                     <b-col sm="3">
                         <label class="text-light">Nom ({{sizeLeft(formulaire.nom, 500)}}):</label>
@@ -170,22 +170,23 @@
                     console.log(result);
                     this.projet = result;
 
-                    this.formulaire.nom =  this.projet.projet.nom;
-                    this.formulaire.date =  this.projet.projet.date.split(' ')[0];
-                    this.formulaire.miniature = this.projet.projet.miniature;
+
+                    if( this.projet.projet.nom && this.projet.projet.nom !== "null" ) this.formulaire.nom =  this.projet.projet.nom;
+                    if( this.projet.projet.date && this.projet.projet.date !== "null" ) this.formulaire.date =  this.projet.projet.date.split(' ')[0];
+                    if( this.projet.projet.miniature && this.projet.projet.miniature !== "null" ) this.formulaire.miniature = this.projet.projet.miniature;
                     let temp =  this.projet.ImagesCarousel;
                     this.carouselCurrent = Array();
                     for (let i = 0; i < temp.length; i++) {
                         const image = temp[i].image;
                         this.carouselCurrent[i] = image;
                     }
-                    this.miniatureUrl = this.projet.projet.miniature;
-                    this.formulaire.description = this.projet.projet.description;
-                    this.formulaire.contexte = this.projet.projet.contexte;
-                    this.formulaire.collaboration = this.projet.projet.collaboration;
-                    this.formulaire.idVideo = this.projet.projet.idVideo;
-                    this.formulaire.urlSite = this.projet.projet.url;
-                    this.formulaire.type = this.projet.projet.type;
+                    if( this.projet.projet.miniature && this.projet.projet.miniature !== "null" ) this.miniatureUrl = this.projet.projet.miniature;
+                    if( this.projet.projet.description && this.projet.projet.description !== "null" ) this.formulaire.description = this.projet.projet.description;
+                    if( this.projet.projet.contexte && this.projet.projet.contexte !== "null" ) this.formulaire.contexte = this.projet.projet.contexte;
+                    if( this.projet.projet.collaboration && this.projet.projet.collaboration !== "null" ) this.formulaire.collaboration = this.projet.projet.collaboration;
+                    if( this.projet.projet.idVideo && this.projet.projet.idVideo !== "null" ) this.formulaire.idVideo = this.projet.projet.idVideo;
+                    if( this.projet.projet.url && this.projet.projet.url !== "null" ) this.formulaire.urlSite = this.projet.projet.url;
+                    if( this.projet.projet.type && this.projet.projet.type !== "null" ) this.formulaire.type = this.projet.projet.type;
                 });
                 /*ajaxService.axiosGetImageCarouselFromProjet(this.$route.params.id).then(result => {
                     this.formulaire.carousel = result.data;

@@ -55,21 +55,6 @@
             }
             console.log(this.$store.getters.getAsscroll);*/
 
-            //MENU
-
-            const nav = document.getElementById('navMob');
-            const burger = document.getElementById('burgerTrigger');
-            const overlay = document.getElementById('overlay');
-
-            if( burger )
-            {
-                burger.addEventListener('click', () => {
-                    burger.classList.toggle('active');
-                    nav.classList.toggle('active');
-                    overlay.classList.toggle('active');
-                });
-            }
-
         },
         methods: {
 

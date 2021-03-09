@@ -1,32 +1,6 @@
 <template>
     <div v-if="projet" class="projet" style="background-color: #111111; padding-top: 5vh;">
-        <div v-if="$mq === 'md' || $mq === 'lg'" id="nav"
-             class="d-flex justify-content-between flex-row px-3 py-2 fixed-top">
-            <div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;"
-                 @click="$router.push('Projet')"></div>
-            <div class="d-flex justify-content-center align-items-center">
-                <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sites')">Sites</span>
-                <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('sky')">Animations</span>
-                <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('jeux')">Jeux</span>
-                <span style="cursor: pointer;" class="mr-5 text-light" @click="scrollMeTo('Illustrations')">Illustrations</span>
-            </div>
-        </div>
-
-        <div v-else class="fixed-top" style="z-index: 2">
-            <div id="burgerTrigger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul id="navMob" class="d-flex w-100 p-0 flex-column">
-                <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sites')">Sites</li>
-                <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('sky')">Animations</li>
-                <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('jeux')">Jeux</li>
-                <li class="text-light" style="font-size: 1.5rem !important;" @click="scrollMeTo('Illustrations')">
-                    Illustrations
-                </li>
-            </ul>
-        </div>
+        <MenuHeader/>
 
         <div class="p-3">
 
@@ -40,23 +14,25 @@
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                         </div>
-                        <b-carousel
-                                id="carousel-1"
-                                v-model="slideNb"
-                                :interval="4000"
-                                controls
-                                indicators
-                                background="#ababab"
-                                img-width="1024"
-                                img-height="480"
-                                style="text-shadow: 1px 1px 2px #333;"
-                        >
-                            <!-- Slides with custom text -->
-                            <b-carousel-slide v-for="image in projet.ImagesCarousel" :key="image.id" :img-src="image.image">
-                                <b-button variant="outline-light" @click="openLink(image.image)">Afficher en grand</b-button>
-                            </b-carousel-slide>
+                        <div v-if="projet.ImagesCarousel && projet.ImagesCarousel.length !== 0">
+                            <b-carousel
+                                    id="carousel-1"
+                                    v-model="slideNb"
+                                    :interval="4000"
+                                    controls
+                                    indicators
+                                    background="#ababab"
+                                    img-width="1024"
+                                    img-height="480"
+                                    style="text-shadow: 1px 1px 2px #333;"
+                            >
+                                <!-- Slides with custom text -->
+                                <b-carousel-slide v-for="image in projet.ImagesCarousel" :key="image.id" :img-src="image.image">
+                                    <b-button variant="outline-light" @click="openLink(image.image)">Afficher en grand</b-button>
+                                </b-carousel-slide>
 
-                        </b-carousel>
+                            </b-carousel>
+                        </div>
                         <div class="text-light">
 
                         </div>
@@ -79,7 +55,7 @@
     <div v-else>
         <div class="d-flex justify-content-center align-items-center text-center flex-column" style="height: 100vh">
             <span class="mb-3">Ohoh... Contenu non trouvé ! Merci de contacter l'administrateur du site.</span>
-            <b-button @click="$router.push('Accueil')" class="mb-3">Revenir à l'accueil</b-button>
+            <b-button @click="$router.push('/')" class="mb-3">Revenir à l'accueil</b-button>
             <b-button @click="$router.push('Contact')" class="mb-3">Contacter l'administrateur</b-button>
         </div>
     </div>
@@ -87,9 +63,11 @@
 
 <script>
     import ajaxService from "../services/ajaxService.js";
+    import MenuHeader from "../components/MenuHeader";
 
     export default {
         name: 'Projet',
+        components: {MenuHeader},
 
         data() {
             return {
@@ -98,9 +76,8 @@
             }
         },
 
-        components: {},
         mounted() {
-            ajaxService.axiosGetProjet(20).then(result => {
+            ajaxService.axiosGetProjet(this.$store.getters.getProjetID).then(result => {
                 this.projet = result;
                 console.log(result);
             });

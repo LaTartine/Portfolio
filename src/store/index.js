@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     projetID: "0",
     asscroll: null,
-    isConn: false
+    isConn: false,
+    scrollTo: "null",
   },
   getters: {
     getProjetID(context)
@@ -45,6 +46,10 @@ export default new Vuex.Store({
       console.log("set connected");
       state.isConn = true;
       console.log(state.isConn);
+    },
+    setScrollTo(state, value)
+    {
+      state.scrollTo = value;
     }
   },
   actions: {
