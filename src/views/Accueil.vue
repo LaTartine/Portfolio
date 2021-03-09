@@ -43,7 +43,7 @@
                         <div class="offset-md-1 offset-1 col-md-5 col-9 parallax2 text-light" data-depth="2">Bienvenue
                             sur mon Portfolio<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, il est conseillé de scroller à l'aide de l'ascenseur ou de maintenir le clique molette.</span><br><br>N'hésitez
                             pas à me contacter
-                            <b-button @click="$router.push('Contact')"><i class="fas fa-envelope"></i></b-button>
+                            <b-button class="ml-2" @click="$router.push('Contact')" variant="outline-light" pill><i class="fas fa-envelope"></i></b-button>
                             <br> <br>Bonne visite !
                         </div>
                         <div class="offset-md-2 offset-2 col-md-3 col-9 parallax2" data-depth="5"><img
@@ -865,8 +865,8 @@
                 </div>
             </div>
             <div class="footer text-light" style="background-color: rgb(0,0,0); height: 100px">
-                <div class="text-center w-100">
-                    <b-button class="mx-auto" @click="$router.push('Contact')">Laisser un commentaire</b-button>
+                <div class=" w-100">
+                    <b-button class="ml-auto d-block mr-5" variant="outline-light" pill @click="$router.push('Contact')">Laisser un commentaire<i class="far fa-comment-alt ml-2"></i></b-button>
                 </div>
             </div>
 
@@ -1659,12 +1659,12 @@
     /*clouds*/
 
     .cloud {
-        background-image: url('https://i.pinimg.com/originals/19/8d/ae/198daeda14097d45e417e62ff283f10e.png');
+        background-image: url('../assets/sky/cloud_lite.png');
         background-position: 0px 0px;
         background-repeat: repeat-x;
         height: 100%;
         background-size: 100%;
-        opacity: 0.25;
+        opacity: 0.5;
     }
 
     @keyframes cloud {

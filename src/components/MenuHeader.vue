@@ -1,7 +1,7 @@
 <template>
     <div v-if="$mq === 'md' || $mq === 'lg'" id="nav"
          class="d-flex justify-content-between flex-row px-3 py-2 fixed-top">
-        <div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;" @click="goTo('null')"></div>
+        <div class="" style="width: 50px; height: 50px; border-radius: 25px;" @click="goTo('null')"><img src="../assets/logo_white.svg" alt=""></div>
         <div class="d-flex justify-content-center align-items-center">
             <span style="cursor: pointer;" class="mr-5 text-light" @click="goTo('sites')">Sites</span>
             <span style="cursor: pointer;" class="mr-5 text-light" @click="goTo('sky')">Animations</span>
@@ -18,7 +18,7 @@
             <div class="line"></div>
         </div>
         <ul id="navMob" class="d-flex w-100 p-0 flex-column">
-            <li class="burgerLink text-light mb-5" style="font-size: 1.5rem !important;" @click="goTo('null')"><div class="bg-white" style="width: 50px; height: 50px; border-radius: 25px;"></div></li>
+            <li class="burgerLink text-light mb-5" style="font-size: 1.5rem !important;" @click="goTo('null')"><div class="" style="width: 50px; height: 50px; border-radius: 25px;"><img src="../assets/logo_white.svg" alt=""></div></li>
             <li class="burgerLink text-light" style="font-size: 1.5rem !important;" @click="goTo('sites')">Sites</li>
             <li class="burgerLink text-light" style="font-size: 1.5rem !important;" @click="goTo('sky')">Animations</li>
             <li class="burgerLink text-light" style="font-size: 1.5rem !important;" @click="goTo('jeux')">Jeux</li>
@@ -68,7 +68,7 @@
                     this.$router.push('/');
                 }
                 this.$store.commit("setScrollTo", nom);
-            }
+            },
         }
     }
 </script>

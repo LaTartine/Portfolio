@@ -108,7 +108,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #17141d;
+        background-color: #111111;
         color: white;
         position: fixed;
         right: 0;
