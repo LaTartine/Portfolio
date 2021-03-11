@@ -7,7 +7,7 @@
             <div style="min-height: 90vh; margin-top: 5vh;" class="container-fluid mb-4 bg-dark p-4">
                 <div class="row">
                     <div class="d-flex flex-column col-12 col-md-6 px-3">
-                        <div class="w-100 h-100 mb-2">
+                        <div class="w-100 mb-2">
                             <div class="d-flex flex-row align-items-center mb-4"><h1 class="text-light mr-4">{{projet.projet.nom}}</h1><span class="d-inline-block text-light">{{this.dateToFrench(projet.projet.date)}}</span></div>
                             <iframe v-if="projet.projet.idVideo && projet.projet.idVideo != 'null'" class="mx-auto" style="" width="100%" height="480"
                                     :src=calculateYoutubelink(projet.projet.idVideo) frameborder="0"
@@ -39,12 +39,12 @@
                     </div>
                     <div class="col-12 col-md-6 px-3 mt-5 text-light">
                         <h2>Description</h2>
-                        <p>{{projet.projet.description}}</p>
-                        <h2>Contexte</h2>
-                        <p>{{projet.projet.contexte}}</p>
-                        <h2>Collaboration</h2>
-                        <p>{{projet.projet.collaboration}}</p>
-                        <b-button v-if="projet.projet.url && projet.projet.url !== 'null'" @click="openLink(projet.projet.url)">Voir le site</b-button>
+                        <p v-html="projet.projet.description"></p>
+                        <h2 v-if="projet.projet.contexte && projet.projet.contexte !=='null'" class="mt-4">Contexte</h2>
+                        <p v-if="projet.projet.contexte && projet.projet.contexte !=='null'" v-html="projet.projet.contexte"></p>
+                        <h2 v-if="projet.projet.contexte && projet.projet.collaboration !=='null'" class="mt-4">Collaboration</h2>
+                        <p v-if="projet.projet.contexte && projet.projet.collaboration !=='null'" v-html="projet.projet.collaboration"></p>
+                        <b-button class="mt-4" v-if="projet.projet.url && projet.projet.url !== 'null'" variant="outline-light" pill @click="openLink(projet.projet.url)">Voir le site</b-button>
                     </div>
                 </div>
             </div>

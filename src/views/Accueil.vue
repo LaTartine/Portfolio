@@ -41,9 +41,13 @@
 
                     <div class="row mt-3" style="margin-bottom: 50px">
                         <div class="offset-md-1 offset-1 col-md-5 col-9 parallax2 text-light" data-depth="2">Bienvenue
-                            sur mon Portfolio<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, il est conseillé de scroller à l'aide de l'ascenseur ou de maintenir le clique molette.</span><br><br>N'hésitez
+                            sur mon Portfolio !<br><br>Je m'appelle Allan Pinot,
+                            j'ai 19 ans et je suis passioné par la création.<br><br>L'animation, le dessin et la
+                            programmation sont ce pourquoi je suis ici. J'aime créer des univers et les faire vivre
+                            !<span v-if="$mq === 'lg'"> <br><br> Pour une meilleure expérience sur le site, je vous recommande de scroller à l'aide de l'ascenseur, de votre pavé tactile ou de maintenir le clique molette.</span><br><br>N'hésitez
                             pas à me contacter
-                            <b-button class="ml-2" @click="$router.push('Contact')" variant="outline-light" pill><i class="fas fa-envelope"></i></b-button>
+                            <b-button class="ml-2" @click="$router.push('Contact')" variant="outline-light" pill><i
+                                    class="fas fa-envelope"></i></b-button>
                             <br> <br>Bonne visite !
                         </div>
                         <div class="offset-md-2 offset-2 col-md-3 col-9 parallax2" data-depth="5"><img
@@ -71,7 +75,8 @@
                                     <circle cx="46.17" cy="46.17" r="7"/>
                                 </svg>
                                 <div :id="'tooltip-stars'+index" ref="starProjectSelector" class="starProjectSelector"
-                                     style="position: absolute; top: 0; left: 0;" @click="$bvModal.show('modal-sites'+index)"></div>
+                                     style="position: absolute; top: 0; left: 0;"
+                                     @click="$bvModal.show('modal-sites'+index)"></div>
                             </div>
                         </div>
                         <b-tooltip v-if="index === 0 && $mq !== 'sm'" show placement="right" variant="light"
@@ -81,26 +86,29 @@
                                  style="width: 450px">
                                 <img class="w-100 h-100 mb-2" :src="item.projet.miniature" alt="">
                                 <h4>{{item.projet.nom}}</h4>
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <b-button pill @click="openProjet(item.projet.id)">Voir le projet</b-button>
                             </div>
                         </b-tooltip>
-                        <b-tooltip v-else-if="$mq !== 'sm'" variant="light" placement="right" :id="'starProjectTooltip'+index"
+                        <b-tooltip v-else-if="$mq !== 'sm'" variant="light" placement="right"
+                                   :id="'starProjectTooltip'+index"
                                    ref="starProjectTooltip" :target="'tooltip-stars'+index">
                             <div class="d-flex flex-column align-items-center justify-content-center py-2"
                                  style="width: 450px">
                                 <img class="w-100 h-100 mb-2" :src="item.projet.miniature" alt="">
                                 <h4>{{item.projet.nom}}</h4>
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <b-button pill @click="openProjet(item.projet.id)">Voir le projet</b-button>
                             </div>
                         </b-tooltip>
                         <div v-else>
                             <b-modal :id="'modal-sites'+index" centered scrollable :title="item.projet.nom">
                                 <img class="w-100 mb-2" :src="item.projet.miniature" alt="">
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <template #modal-footer="{ ok, cancel }">
-                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir le projet</b-button>
+                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir
+                                        le projet
+                                    </b-button>
                                     <b-button pill size="sm" variant="danger" @click="cancel()">
                                         Cancel
                                     </b-button>
@@ -129,7 +137,8 @@
                         <b-col ref="skyProjectCol" cols="1">
                             <div data-depth='0' ref="lantern" class="parallax3 lantern">
                                 <div ref="outerLight" class="outerLight"></div>
-                                <div :id="'tooltip-sky'+index" @click="$bvModal.show('modal-animations'+index)" ref="lanternBody" class="lanternBody">
+                                <div :id="'tooltip-sky'+index" @click="$bvModal.show('modal-animations'+index)"
+                                     ref="lanternBody" class="lanternBody">
                                     <div ref="innerLight" class="innerLight"></div>
                                 </div>
                             </div>
@@ -141,16 +150,18 @@
                                  style="width: 450px">
                                 <img class="w-100 h-100 mb-2" :src="item.projet.miniature" alt="">
                                 <h4>{{item.projet.nom}}</h4>
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <b-button pill @click="openProjet(item.projet.id)">Voir le projet</b-button>
                             </div>
                         </b-tooltip>
                         <div v-else>
                             <b-modal :id="'modal-animations'+index" centered scrollable :title="item.projet.nom">
                                 <img class="w-100 mb-2" :src="item.projet.miniature" alt="">
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <template #modal-footer="{ ok, cancel }">
-                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir le projet</b-button>
+                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir
+                                        le projet
+                                    </b-button>
                                     <b-button pill size="sm" variant="danger" @click="cancel()">
                                         Cancel
                                     </b-button>
@@ -674,16 +685,18 @@
                              style="width: 450px">
                             <img class="w-100 h-100 mb-2" :src="item.projet.miniature" alt="">
                             <h4>{{item.projet.nom}}</h4>
-                            <p>{{item.projet.description}}</p>
+                            <p v-html="item.projet.description" class="text-left"></p>
                             <b-button pill @click="openProjet(item.projet.id)">Voir le projet</b-button>
                         </div>
                     </b-tooltip>
                     <div v-else>
                         <b-modal :id="'modal-jeux'+index" centered scrollable :title="item.projet.nom">
                             <img class="w-100 mb-2" :src="item.projet.miniature" alt="">
-                            <p>{{item.projet.description}}</p>
+                            <p v-html="item.projet.description" class="text-left"></p>
                             <template #modal-footer="{ ok, cancel }">
-                                <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir le projet</b-button>
+                                <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir le
+                                    projet
+                                </b-button>
                                 <b-button pill size="sm" variant="danger" @click="cancel()">
                                     Cancel
                                 </b-button>
@@ -725,7 +738,7 @@
             </div>
             <div class="bg-dark">
                 <div ref="Illustrations" data-depth='0.25' class="jeux container-fluid"
-                     style="margin-top: -200vh; height: max-content; ">
+                     style="margin-top: -200vh; height: max-content; min-height: 200vh">
                     <b-row>
                         <b-col cols="4" offset="0">
                             <h3 class="text-light mt-5" style="">Illustrations</h3>
@@ -821,7 +834,8 @@
                                               style="fill: url(#Dégradé_sans_nom_146)"/>
                                         <circle cx="1194" cy="1200" r="1194" style="fill: url(#Dégradé_sans_nom_97)"/>
 
-                                        <g data-name="Trigger" :id="'tooltip-underground'+index"  @click="$bvModal.show('modal-illustrations'+index)">
+                                        <g data-name="Trigger" :id="'tooltip-underground'+index"
+                                           @click="$bvModal.show('modal-illustrations'+index)">
                                             <rect x="1107.76" y="1108" width="172.48" height="248"
                                                   style="fill: #44403b"/>
                                             <ellipse cx="1194" cy="1108" rx="86.24" ry="92" style="fill: #44403b"/>
@@ -839,22 +853,25 @@
                             </div>
                         </b-col>
 
-                        <b-tooltip v-if="$mq !== 'sm'" variant="light" placement="right" :id="'GroundProjectTooltip'+index"
+                        <b-tooltip v-if="$mq !== 'sm'" variant="light" placement="right"
+                                   :id="'GroundProjectTooltip'+index"
                                    ref="groundProjectTooltip" :target="'tooltip-underground'+index">
                             <div class="d-flex flex-column align-items-center justify-content-center py-2"
                                  style="width: 450px">
                                 <img class="w-100 h-100 mb-2" :src="item.projet.miniature" alt="">
                                 <h4>{{item.projet.nom}}</h4>
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <b-button pill @click="openProjet(item.projet.id)">Voir le projet</b-button>
                             </div>
                         </b-tooltip>
                         <div v-else>
                             <b-modal :id="'modal-illustrations'+index" centered scrollable :title="item.projet.nom">
                                 <img class="w-100 mb-2" :src="item.projet.miniature" alt="">
-                                <p>{{item.projet.description}}</p>
+                                <p v-html="item.projet.description" class="text-left"></p>
                                 <template #modal-footer="{ ok, cancel }">
-                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir le projet</b-button>
+                                    <b-button pill size="sm" variant="primary" @click="openProjet(item.projet.id)">Voir
+                                        le projet
+                                    </b-button>
                                     <b-button pill size="sm" variant="danger" @click="cancel()">
                                         Cancel
                                     </b-button>
@@ -864,10 +881,38 @@
                     </b-row>
                 </div>
             </div>
-            <div class="footer text-light" style="background-color: rgb(0,0,0); height: 100px">
-                <div class=" w-100">
-                    <b-button class="ml-auto d-block mr-5" variant="outline-light" pill @click="$router.push('Contact')">Laisser un commentaire<i class="far fa-comment-alt ml-2"></i></b-button>
+
+            <div class="d-flex flex-column w-100 justify-content-center align-items-center pt-5"
+                 style="background-color: black">
+                <img v-if="$mq === 'sm'" class="w-50 mt-5" src="../assets/underground/me.jpg" alt="me">
+                <img v-else class="w-25 mt-5" src="../assets/underground/me.jpg" alt="me">
+                <div id="wrapper">
+                    <div id="paper">
+                        <div id="text" style="overflow: hidden; min-height: 160px; ">
+                            Tiens, vous êtes toujours là ! Vous voulez en apprendre un peu plus sur moi ?<br><br>Je
+                            m'appelle Allan,
+                            j'ai 19 ans et je suis passioné par la création.<br>Je suis originaire de Besançon dans le
+                            Doubs et je suis actuellement en deuxième année de DUT Métiers du Multimédia et de
+                            l'Internet à Montbéliard.
+                            <br><br>Le plus important pour moi est de faire mon travail avec passion.<br>Ce que j'aime ?
+                            Créer des univers virtuels et les faire vivre au travers de la
+                            programation, l'illustration et l'animation.<br><br>
+                            Merci d'être passé !<br>         Allan
+                        </div>
+
+                    </div>
+
                 </div>
+            </div>
+            <div class="footer text-light" style="background-color: rgb(0,0,0); min-height: 100px">
+
+                <div class="d-flex justify-content-between w-100">
+                    <div class="ml-5" @click="goToPage('https://www.linkedin.com/in/allan-pinot-217950197/')" style="font-size: 1.5rem"><i class="fab fa-linkedin"></i></div>
+                    <b-button class="ml-auto d-block mr-5" variant="outline-light" pill
+                              @click="$router.push('Contact')">Laisser un commentaire<i
+                            class="far fa-comment-alt ml-2"></i></b-button>
+                </div>
+                <span class="text-center d-block mx-auto mtdri-3" style="font-size: 0.8rem">© 2021 - Tous Droits Réservés <br> Allan Pinot</span>
             </div>
 
         </div>
@@ -976,7 +1021,9 @@
                             this.projetsJeux = result3;
                             this.setupLand();
                             this.projetsDessin = result4;
-                            setTimeout(() => {  this.scrollMeTo(this.$store.state.scrollTo); }, 200);
+                            setTimeout(() => {
+                                this.scrollMeTo(this.$store.state.scrollTo);
+                            }, 200);
                         });
                     });
                 });
@@ -987,7 +1034,7 @@
 
         },
         watch: {
-            '$store.state.scrollTo': function() {
+            '$store.state.scrollTo': function () {
                 this.scrollMeTo(this.$store.state.scrollTo);
             }
         },
@@ -997,8 +1044,7 @@
         },
         methods:
             {
-                setupSpace()
-                {
+                setupSpace() {
                     this.$nextTick(() => {
                         //SPACE
 
@@ -1095,8 +1141,7 @@
                     });
 
                 },
-                setupSky()
-                {
+                setupSky() {
                     //SKY
                     this.$nextTick(() => {
                         //Décallage aléatoire de l'animation des lanternes animées
@@ -1124,15 +1169,14 @@
 
                             let rnd = 0;
 
-                            do{
+                            do {
                                 rnd = Math.floor(Math.random() * 8 + 1);
 
                                 //si c'est un petit écran, éviter de mettre des objets trop à droite pour ne pas qu'ils débordent de l'écran
-                                if( this.$mq === 'sm' )
-                                {
+                                if (this.$mq === 'sm') {
                                     rnd = Math.floor(Math.random() * 4 + 1);
                                 }
-                            }while (rnd === last || rnd === last2); //Eviter que deux se retrouve l'une au dessus de l'autre
+                            } while (rnd === last || rnd === last2); //Eviter que deux se retrouve l'une au dessus de l'autre
 
                             allskyProject[i].classList.add('offset-' + rnd);
 
@@ -1144,8 +1188,7 @@
                         this.SetupVerticalParallax();
                     });
                 },
-                setupLand()
-                {
+                setupLand() {
                     //LANDSCAOGE
                     this.$nextTick(() => {
                         //moulin
@@ -1416,7 +1459,7 @@
                     });
                 },
                 scrollMeTo(refName) {
-                    if( refName && refName !== "null") {
+                    if (refName && refName !== "null") {
                         let element = this.$refs[refName];
                         let top = element.offsetTop;
 
@@ -1442,12 +1485,8 @@
                     window.open(url);
                 },
 
-                getImgUrl(pic) {
-                    return require('../assets/miniatures/' + pic)
-                },
 
-                openProjet( idProjet )
-                {
+                openProjet(idProjet) {
                     this.$store.commit('setProjetID', idProjet);
                     this.$router.push("Projet");
                 }
@@ -1744,6 +1783,68 @@
 
     .lanternUnderground:not(:last-child) {
         /*margin-bottom: -300px;*/
+    }
+
+    #parallaxUnderground::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -100px;
+        position: relative;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    /*MOI*/
+
+    #paper {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    #margin {
+        margin-left: 12px;
+        margin-bottom: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    #text {
+        width: 90%;
+        max-width: 700px;
+        margin: auto;
+        background-color: #FFF;
+        color: #222;
+        font-family: Courier, monospace;
+        font-weight: normal;
+        font-size: 24px;
+        resize: none;
+        line-height: 40px;
+        background-image: url("../assets/underground/lines.png"), url("../assets/underground/paper.jpg");
+        background-repeat: repeat-y, repeat;
+        background-position: center right;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -webkit-box-shadow: 0px 2px 14px #000;
+        box-shadow: 0px 2px 14px #000;
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 45px;
+        padding-bottom: 34px;
+        @media (min-width: 768px) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    #wrapper {
+        width: 100%;
+        height: auto;
+        margin: 24px auto 100px;
     }
 
     /*Font*/
